@@ -8,7 +8,6 @@
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
-        "react-app/jest",
         "eslint-config-prettier",
         "plugin:react/jsx-runtime"
     ],

@@ -1,5 +1,4 @@
 import { View, Text, SafeAreaView, StatusBar, StyleSheet } from "react-native"
-import React from "react"
 import globalStyle from "../../styles/global.style"
 import { COLORS } from "../../constants/constantsFiles"
 

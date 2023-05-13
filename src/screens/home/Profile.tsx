@@ -1,11 +1,8 @@
 import { View, Text, StyleSheet } from "react-native"
-import React from "react"
-import { StackTypes } from "../../navigators/StackAuth"
-import { IMAGES } from "../../constants/constantsFiles"
 
 const Profile = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <Text>Profile Screen</Text>
         </View>
     )

@@ -60,7 +60,7 @@ const Index = ({ navigation }: Props) => {
                     </Pressable>
                     <Pressable onPress={() => navigation.navigate("Register")}>
                         <Text style={{ marginTop: "30%" }}>
-                            Don't have account?{" "}
+                            Don&#39t have account?{" "}
                             <Text
                                 style={{
                                     color: COLORS.get("primary"),

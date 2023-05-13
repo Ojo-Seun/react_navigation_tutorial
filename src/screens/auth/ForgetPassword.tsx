@@ -1,4 +1,3 @@
-import React from "react"
 import { View, Text, SafeAreaView, StatusBar, StyleSheet } from "react-native"
 import type { NativeStackScreenProps } from "@react-navigation/native-stack"
 import type { StackTypes } from "../../navigators/StackAuth"
@@ -7,7 +6,7 @@ import { COLORS } from "../../constants/constantsFiles"
 
 type Props = NativeStackScreenProps<StackTypes, "ForgetPassword">
 
-const ForgetPassword = ({ route, navigation }: Props) => {
+const ForgetPassword = ({ route }: Props) => {
     return (
         <SafeAreaView style={globalStyle.main}>
             <StatusBar

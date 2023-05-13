@@ -1,73 +1,74 @@
 {
-  "name": "tutorial",
-  "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
-  "scripts": {
-    "start": "expo start ",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "lint": "eslint --ignore-path .gitignore ./src",
-    "lint:fix": "eslint --fix --ignore-path .gitignore ./src",
-    "format": "prettier --check ./src",
-    "write": "prettier --write ./src",
-    "prepare": "husky install",
-    "test": "jest --watch"
-  },
-  "dependencies": {
-    "@expo/webpack-config": "^18.0.1",
-    "@react-navigation/drawer": "^6.6.2",
-    "@react-navigation/native": "^6.1.6",
-    "@react-navigation/native-stack": "^6.9.12",
-    "expo": "~48.0.15",
-    "expo-status-bar": "~1.4.4",
-    "jest": "^29.2.1",
-    "jest-expo": "^48.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-native": "0.71.7",
-    "react-native-safe-area-context": "4.5.0",
-    "react-native-screens": "~3.20.0",
-    "react-native-svg": "13.4.0",
-    "react-native-svg-transformer": "^1.0.0",
-    "react-native-web": "~0.18.10",
-    "react-native-gesture-handler": "~2.9.0",
-    "react-native-reanimated": "~2.14.4"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.20.0",
-    "@testing-library/jest-native": "^5.4.2",
-    "@testing-library/react-native": "^12.1.2",
-    "@types/jest": "^29.5.1",
-    "@types/react": "~18.0.14",
-    "@typescript-eslint/eslint-plugin": "^5.59.5",
-    "@typescript-eslint/parser": "^5.59.5",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-react": "^7.32.2",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.0",
-    "jest": "^29.5.0",
-    "prettier": "^2.8.8",
-    "typescript": "^4.9.4"
-  },
-  "private": true,
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,css,scss,md}": [
-      "prettier --config -prettierrc --write",
-      "git commit"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+    "name": "tutorial",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+        "start": "expo start ",
+        "android": "expo start --android",
+        "ios": "expo start --ios",
+        "web": "expo start --web",
+        "lint": "eslint --ignore-path .gitignore ./src",
+        "lint:fix": "eslint --fix --ignore-path .gitignore ./src",
+        "format": "prettier --check ./src",
+        "write": "prettier --write ./src",
+        "prepare": "husky install",
+        "test": "jest"
+    },
+    "dependencies": {
+        "@expo/webpack-config": "^18.0.1",
+        "@react-navigation/drawer": "^6.6.2",
+        "@react-navigation/native": "^6.1.6",
+        "@react-navigation/native-stack": "^6.9.12",
+        "expo": "~48.0.15",
+        "expo-status-bar": "~1.4.4",
+        "jest": "^29.2.1",
+        "jest-expo": "^48.0.2",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-native": "0.71.7",
+        "react-native-gesture-handler": "~2.9.0",
+        "react-native-reanimated": "~2.14.4",
+        "react-native-safe-area-context": "4.5.0",
+        "react-native-screens": "~3.20.0",
+        "react-native-svg": "13.4.0",
+        "react-native-svg-transformer": "^1.0.0",
+        "react-native-web": "~0.18.10"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.20.0",
+        "@testing-library/jest-native": "^5.4.2",
+        "@testing-library/react-native": "^12.1.2",
+        "@types/jest": "^29.5.1",
+        "@types/react": "~18.0.14",
+        "@typescript-eslint/eslint-plugin": "^5.59.5",
+        "@typescript-eslint/parser": "^5.59.5",
+        "eslint": "^8.40.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-jest": "^27.2.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.32.2",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.0",
+        "jest": "^29.5.0",
+        "prettier": "^2.8.8",
+        "typescript": "^4.9.4"
+    },
+    "private": true,
+    "lint-staged": {
+        "src/**/*.{js,jsx,ts,css,scss,md}": [
+            "prettier --config -prettierrc --write",
+            "git commit"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "jest": {
+        "preset": "react-native",
+        "transformIgnorePatterns": [
+            "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
+        ]
     }
-  },
-  "jest": {
-    "preset": "react-native",
-    "transformIgnorePatterns": [
-      "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
-    ]
-  }
 }
